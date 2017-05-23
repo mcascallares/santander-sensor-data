@@ -34,12 +34,14 @@ Note that Elastic containers will also install [X-Pack](https://www.elastic.co/p
 
 ## Configuring Kibana
 
-Once data is loaded into Elasticsearch we will use Kibana to visualize it. To access Kibana the default username and password is *elastic:changeme*
+Once data is loaded into Elasticsearch we will use Kibana to visualize it. To access Kibana the default username and password is **elastic:changeme**
 
-The first step is to configure a Kibana index pattern for the index 'sensors'.
+![login](https://github.com/mcascallares/santander-sensor-data/blob/master/screenshots/login.png)
+
+The first step is to configure a Kibana index pattern for the index 'sensors'. In the Management > Kibana > Index Patterns section we should have:
+
+![indexpatterns](https://github.com/mcascallares/santander-sensor-data/blob/master/screenshots/indexpatterns.png)
 
 
-Screenshot here
-
-
+After this step, we can import the prebuilt visualizations and dashboard. For that we should go to Management > Kibana > Saved Objects and import kibana/objects.json file.
 
