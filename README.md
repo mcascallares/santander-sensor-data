@@ -1,6 +1,6 @@
 # Santander Sensor Data
 
-Demo using the Elastic stack to visualize sensor information provided by Santander Town Hall and available through datos.gob.es. This [dataset](http://datos.gob.es/es/catalogo/l01390759-sensores-ambientales) contains sensor measurements (light, noise, temperature and battery) located in different points across the city of Santander.
+Demo using the Elastic stack to visualize sensor information provided by Santander Town Hall and available through datos.gob.es. [This dataset](http://datos.gob.es/es/catalogo/l01390759-sensores-ambientales) contains sensor measurements for light, noise, temperature and battery gathered in different points across the city of Santander.
 
 ## Requirements
 
@@ -30,7 +30,7 @@ To parse, load and visualize the data we only need to execute the containers def
 docker-compose up
 ```
 
-Note that the Elastic containers will also deploy [X-Pack](https://www.elastic.co/products/x-pack), commercial extensions provided by Elastic, to get access control and better mapping capabilities.
+Note that Elastic containers will also install [X-Pack](https://www.elastic.co/products/x-pack), commercial extensions provided by Elastic, to get access control and better mapping capabilities.
 
 ## Configuring Kibana
 
