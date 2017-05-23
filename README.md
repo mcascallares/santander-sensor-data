@@ -1,17 +1,19 @@
 # Santander Sensor Data
 
-Demo using the Elastic stack to visualize sensor information provided by Santander Town Hall and available through datos.gob.es. [This dataset](http://datos.gob.es/es/catalogo/l01390759-sensores-ambientales) contains sensor measurements for light, noise, temperature and battery gathered in different points across the city of Santander.
+Quick demo using the Elastic stack to visualize sensor information provided by Santander Town Hall and available through [datos.gob.es](http://datos.gob.es). [This dataset](http://datos.gob.es/es/catalogo/l01390759-sensores-ambientales) contains sensor measurements for light, noise, temperature and battery gathered from different locations across the city of Santander.
 
 ## Requirements
 
 - docker engine (v1.12.0+)
 - docker-compose
+- Elastic stack v5.4 (installed and managed by Docker()
 
 ## Usage
 
 ### Retrieving new data
 
 Data can be accessed [here](http://datos.gob.es/es/catalogo/l01390759-sensores-ambientales). For this example we will use the [JSON format](http://datos.santander.es/api/rest/datasets/sensores_smart_env_monitoring.json) to load data into Elasticsearch using Logstash.
+
 
 ## Sanitize the data
 
@@ -24,13 +26,14 @@ cat sensores_smart_env_monitoring.json | jq -c . > data_no_eol.json
 
 ## Running the Elastic stack
 
-To parse, load and visualize the data we only need to execute the containers defined in docker-compose.yml
+To parse, load and visualize the data we only need to execute the containers defined in docker-compose.yml:
 
 ```
 docker-compose up
 ```
 
 Note that Elastic containers will also install [X-Pack](https://www.elastic.co/products/x-pack), commercial extensions provided by Elastic, to get access control and better mapping capabilities.
+
 
 ## Configuring Kibana
 
@@ -42,13 +45,13 @@ The first step is to configure a Kibana index pattern for the index 'sensors'. I
 
 ![indexpatterns](https://github.com/mcascallares/santander-sensor-data/blob/master/screenshots/indexpatterns.png)
 
+After this step, we can import the pre-built visualizations and dashboard. For that we should go to Management > Kibana > Saved Objects and import kibana/objects.json file.
 
-After this step, we can import the prebuilt visualizations and dashboard. For that we should go to Management > Kibana > Saved Objects and import kibana/objects.json file.
 
 ## Dashboard
 
-Finally to open the prebuilt dashboard we go to Dashboard and we open/select the dashboard called 'Santander'
+Finally to open the pre-built dashboard we go to Dashboard and we open/select the dashboard called 'Santander':
 
 ![indexpatterns](https://github.com/mcascallares/santander-sensor-data/blob/master/screenshots/dashboard.png)
 
-You can also create your own visualization and dashboards depending on your needs.
+You can also create your own visualization and dashboards depending on your needs. Enjoy!
