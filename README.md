@@ -11,11 +11,11 @@ Demo using the Elastic stack to visualize sensor information provided by Santand
 
 ### Retrieving new data
 
-Data can be accessed [here(http://datos.gob.es/es/catalogo/l01390759-sensores-ambientales)]. For this example we will use the [JSON format](http://datos.santander.es/api/rest/datasets/sensores_smart_env_monitoring.json) to load data into Elasticsearch using Logstash.
+Data can be accessed [here](http://datos.gob.es/es/catalogo/l01390759-sensores-ambientales). For this example we will use the [JSON format](http://datos.santander.es/api/rest/datasets/sensores_smart_env_monitoring.json) to load data into Elasticsearch using Logstash.
 
 ## Sanitize the data
 
-In order to parse the data with Logstash, we will remove the EOLs in the file. For this I will use [jq JSON processor(https://stedolan.github.io/jq/)] but you can use amything that you like, even sed ;)
+In order to parse the data with Logstash, we will remove the EOLs in the file. For this I will use [jq JSON processor](https://stedolan.github.io/jq/) but you can use anything that you like, even sed ;)
 
 ```
 wget http://datos.santander.es/api/rest/datasets/sensores_smart_env_monitoring.json
