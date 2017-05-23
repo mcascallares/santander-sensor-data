@@ -45,3 +45,10 @@ The first step is to configure a Kibana index pattern for the index 'sensors'. I
 
 After this step, we can import the prebuilt visualizations and dashboard. For that we should go to Management > Kibana > Saved Objects and import kibana/objects.json file.
 
+## Dashboard
+
+Finally to open the prebuilt dashboard we go to Dashboard and we open/select the dashboard called 'Santander'
+
+![indexpatterns](https://github.com/mcascallares/santander-sensor-data/blob/master/screenshots/dashboard.png)
+
+You can also create your own visualization and dashboards depending on your needs.
