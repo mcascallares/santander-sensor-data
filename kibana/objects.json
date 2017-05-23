@@ -1,0 +1,82 @@
+[
+  {
+    "_id": "a01ea230-3f82-11e7-babd-97293447ad45",
+    "_type": "dashboard",
+    "_source": {
+      "title": "Santander",
+      "hits": 0,
+      "description": "",
+      "panelsJSON": "[{\"size_x\":6,\"size_y\":5,\"panelIndex\":2,\"type\":\"visualization\",\"id\":\"59539e00-3f82-11e7-babd-97293447ad45\",\"col\":7,\"row\":1},{\"size_x\":6,\"size_y\":5,\"panelIndex\":3,\"type\":\"visualization\",\"id\":\"462f68e0-3f82-11e7-babd-97293447ad45\",\"col\":1,\"row\":1},{\"size_x\":12,\"size_y\":4,\"panelIndex\":4,\"type\":\"visualization\",\"id\":\"c3421b30-3f81-11e7-b2d8-6feb703e0e61\",\"col\":1,\"row\":6},{\"size_x\":12,\"size_y\":7,\"panelIndex\":5,\"type\":\"visualization\",\"id\":\"630accc0-3f82-11e7-babd-97293447ad45\",\"col\":1,\"row\":10}]",
+      "optionsJSON": "{\"darkTheme\":false}",
+      "uiStateJSON": "{\"P-2\":{\"mapCenter\":[43.466625080115634,-3.8211822509765625],\"mapZoom\":13},\"P-3\":{\"mapCenter\":[43.464880828929545,-3.8294219970703125],\"mapZoom\":13},\"P-5\":{\"mapZoom\":14,\"mapCenter\":[43.46911678021725,-3.809380531311035]}}",
+      "version": 1,
+      "timeRestore": true,
+      "timeTo": "2016-05-03T01:27:18.372Z",
+      "timeFrom": "2013-01-26T05:07:13.768Z",
+      "refreshInterval": {
+        "display": "Off",
+        "pause": false,
+        "value": 0
+      },
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[{\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}}}],\"highlightAll\":true,\"version\":true}"
+      }
+    }
+  },
+  {
+    "_id": "462f68e0-3f82-11e7-babd-97293447ad45",
+    "_type": "visualization",
+    "_source": {
+      "title": "Temperature",
+      "visState": "{\"title\":\"Temperature\",\"type\":\"tile_map\",\"params\":{\"mapType\":\"Heatmap\",\"isDesaturated\":true,\"addTooltip\":true,\"heatMaxZoom\":\"5\",\"heatMinOpacity\":0.1,\"heatRadius\":\"15\",\"heatBlur\":\"24\",\"heatNormalizeData\":true,\"legendPosition\":\"bottomright\",\"mapZoom\":2,\"mapCenter\":[0,0],\"wms\":{\"enabled\":false,\"url\":\"https://basemap.nationalmap.gov/arcgis/services/USGSTopo/MapServer/WMSServer\",\"options\":{\"version\":\"1.3.0\",\"layers\":\"0\",\"format\":\"image/png\",\"transparent\":true,\"attribution\":\"Maps provided by USGS\",\"styles\":\"\"}}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"temperature\",\"customLabel\":\"Average Temperature\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"geohash_grid\",\"schema\":\"segment\",\"params\":{\"field\":\"location\",\"autoPrecision\":true,\"useGeocentroid\":true,\"precision\":2}}],\"listeners\":{}}",
+      "uiStateJSON": "{\"mapZoom\":14,\"mapCenter\":[43.462575848380745,-3.8334131240844727]}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"sensors\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "59539e00-3f82-11e7-babd-97293447ad45",
+    "_type": "visualization",
+    "_source": {
+      "title": "Noise",
+      "visState": "{\"title\":\"Noise\",\"type\":\"tile_map\",\"params\":{\"mapType\":\"Heatmap\",\"isDesaturated\":true,\"addTooltip\":true,\"heatMaxZoom\":\"5\",\"heatMinOpacity\":0.1,\"heatRadius\":\"15\",\"heatBlur\":\"24\",\"heatNormalizeData\":true,\"legendPosition\":\"bottomright\",\"mapZoom\":2,\"mapCenter\":[0,0],\"wms\":{\"enabled\":false,\"url\":\"https://basemap.nationalmap.gov/arcgis/services/USGSTopo/MapServer/WMSServer\",\"options\":{\"version\":\"1.3.0\",\"layers\":\"0\",\"format\":\"image/png\",\"transparent\":true,\"attribution\":\"Maps provided by USGS\",\"styles\":\"\"}}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"noise\",\"customLabel\":\"Average Temperature\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"geohash_grid\",\"schema\":\"segment\",\"params\":{\"field\":\"location\",\"autoPrecision\":true,\"useGeocentroid\":true,\"precision\":2}}],\"listeners\":{}}",
+      "uiStateJSON": "{\"mapZoom\":14,\"mapCenter\":[43.462575848380745,-3.8334131240844727]}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"sensors\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "630accc0-3f82-11e7-babd-97293447ad45",
+    "_type": "visualization",
+    "_source": {
+      "title": "Light",
+      "visState": "{\"title\":\"Light\",\"type\":\"tile_map\",\"params\":{\"mapType\":\"Heatmap\",\"isDesaturated\":true,\"addTooltip\":true,\"heatMaxZoom\":\"5\",\"heatMinOpacity\":0.1,\"heatRadius\":\"15\",\"heatBlur\":\"24\",\"heatNormalizeData\":true,\"legendPosition\":\"bottomright\",\"mapZoom\":2,\"mapCenter\":[0,0],\"wms\":{\"enabled\":false,\"url\":\"https://basemap.nationalmap.gov/arcgis/services/USGSTopo/MapServer/WMSServer\",\"options\":{\"version\":\"1.3.0\",\"layers\":\"0\",\"format\":\"image/png\",\"transparent\":true,\"attribution\":\"Maps provided by USGS\",\"styles\":\"\"}}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"light\",\"customLabel\":\"Average Temperature\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"geohash_grid\",\"schema\":\"segment\",\"params\":{\"field\":\"location\",\"autoPrecision\":true,\"useGeocentroid\":true,\"precision\":2}}],\"listeners\":{}}",
+      "uiStateJSON": "{\"mapZoom\":14,\"mapCenter\":[43.462575848380745,-3.8334131240844727]}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"sensors\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "c3421b30-3f81-11e7-b2d8-6feb703e0e61",
+    "_type": "visualization",
+    "_source": {
+      "title": "Metrics Over Time",
+      "visState": "{\"title\":\"Metrics Over Time\",\"type\":\"metrics\",\"params\":{\"id\":\"15c3e420-3f81-11e7-b2d8-6feb703e0e61\",\"type\":\"timeseries\",\"series\":[{\"id\":\"15c40b30-3f81-11e7-b2d8-6feb703e0e61\",\"color\":\"rgba(211,49,21,1)\",\"split_mode\":\"everything\",\"metrics\":[{\"id\":\"15c40b31-3f81-11e7-b2d8-6feb703e0e61\",\"type\":\"avg\",\"field\":\"temperature\"}],\"seperate_axis\":1,\"axis_position\":\"right\",\"formatter\":\"number\",\"chart_type\":\"bar\",\"line_width\":1,\"point_size\":1,\"fill\":0.5,\"stacked\":\"none\",\"label\":\"Average Temperature\",\"terms_field\":\"identifier\",\"terms_order_by\":null},{\"id\":\"66f65440-3f81-11e7-b2d8-6feb703e0e61\",\"color\":\"rgba(0,156,224,1)\",\"split_mode\":\"everything\",\"metrics\":[{\"id\":\"66f65441-3f81-11e7-b2d8-6feb703e0e61\",\"type\":\"avg\",\"field\":\"noise\"}],\"seperate_axis\":1,\"axis_position\":\"left\",\"formatter\":\"number\",\"chart_type\":\"bar\",\"line_width\":1,\"point_size\":1,\"fill\":0.5,\"stacked\":\"none\",\"label\":\"Average Noise\"},{\"id\":\"991daf40-3f81-11e7-b2d8-6feb703e0e61\",\"color\":\"rgba(252,196,0,1)\",\"split_mode\":\"everything\",\"metrics\":[{\"id\":\"991daf41-3f81-11e7-b2d8-6feb703e0e61\",\"type\":\"avg\",\"field\":\"light\"}],\"seperate_axis\":0,\"axis_position\":\"right\",\"formatter\":\"number\",\"chart_type\":\"bar\",\"line_width\":1,\"point_size\":1,\"fill\":0.5,\"stacked\":\"none\",\"label\":\"Average Light\"}],\"time_field\":\"@timestamp\",\"index_pattern\":\"sensors\",\"interval\":\"auto\",\"axis_position\":\"left\",\"axis_formatter\":\"number\",\"show_legend\":1},\"aggs\":[],\"listeners\":{}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"query_string\":{\"query\":\"*\"}},\"filter\":[]}"
+      }
+    }
+  }
+]
