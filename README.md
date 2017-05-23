@@ -38,10 +38,10 @@ Once data is loaded into Elasticsearch we will use Kibana to visualize it. To ac
 
 ![login](https://github.com/mcascallares/santander-sensor-data/blob/master/screenshots/login.png)
 
-The first step is to configure a Kibana index pattern for the index 'sensors'.
+The first step is to configure a Kibana index pattern for the index 'sensors'. In the Management > Kibana > Index Patterns section we should have:
 
 ![indexpatterns](https://github.com/mcascallares/santander-sensor-data/blob/master/screenshots/indexpatterns.png)
 
 
-
+After this step, we can import the prebuilt visualizations and dashboard. For that we should go to Management > Kibana > Saved Objects and import kibana/objects.json file.
 
