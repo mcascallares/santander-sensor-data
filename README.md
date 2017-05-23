@@ -52,4 +52,4 @@ After this step, we can import the pre-built visualizations and dashboard. For t
 
 ## Dashboard
 
-Finally to open the pre-built dashboard we go to Dashboard and we open/select the dashboard called 'Santander'. You can also create your own visualization and dashboards depending on your needs. Enjoy!
+Finally, to open the pre-built dashboard we go to Dashboard and we open the dashboard called 'Santander'. You can also create your own visualization and dashboards depending on your needs. Enjoy!
