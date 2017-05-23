@@ -1,0 +1,19 @@
+{
+  "template": "sensors*",
+  "settings": {
+    "number_of_shards": 1
+  },
+  "mappings": {
+    "logs": {
+      "properties": {
+        "identifier":   { "type": "integer" },
+        "type":         { "type": "keyword" },
+        "battery":      { "type": "float" },
+        "light":        { "type": "float" },
+        "noise":        { "type": "float" },
+        "temperature":  { "type": "float" },
+        "location":     { "type": "geo_point" }
+      }
+    }
+  }
+}

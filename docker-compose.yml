@@ -1,0 +1,36 @@
+version: '2.1'
+
+services:
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:5.4.0
+    ports: ['127.0.0.1:9200:9200']
+    volumes:
+      - esdata:/usr/share/elasticsearch/data
+    networks: ['stack']
+    cap_add:
+      - IPC_LOCK
+    healthcheck:
+      test: ['CMD', 'curl', '-f', '-u', 'elastic:changeme', 'http://localhost:9200']
+
+  kibana:
+    image: docker.elastic.co/kibana/kibana:5.4.0
+    ports: ['127.0.0.1:5601:5601']
+    networks: ['stack']
+    depends_on: {elasticsearch: {condition: service_healthy}}
+    healthcheck:
+      test: ['CMD', 'curl', '-f', 'http://localhost:5601/login']
+
+  logstash:
+    image: docker.elastic.co/logstash/logstash:5.4.0
+    ports: ['127.0.0.1:9600:9600']
+    volumes:
+      - ./logstash/logstash.conf:/usr/share/logstash/pipeline/logstash.conf
+      - ./data_no_eol.json:/data/data_no_eol.json
+      - ./logstash/sensor_template.json:/data/sensor_template.json
+    networks: ['stack']
+    depends_on: {elasticsearch: {condition: service_healthy}}
+
+networks: {stack: {}}
+
+volumes:
+  esdata:
